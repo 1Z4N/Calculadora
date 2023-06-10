@@ -73,15 +73,21 @@ int main()
     }
     case 5: {
         system("cls");
-        int pr;
-        cout << "///////////////////////////////////////////////////////////////////////////////\n";
-        cout << "Has elegido la herramienta para averiguar si es primo o no, introduce el numero\n";
-        cin >> pr;
-        if (pr % 2 == 0) {
-            cout << "Es primo" << endl;
+        int numero;
+        int c = 0;
+        cout << "///////////////////\n";
+        cout << "Introduce un numero\n";
+        cin >> numero;
+        for (int i = 1; i < numero / 2; i++) {
+            if (numero % i == 0) {
+                c++;
+            }
+        }
+        if (c == 1) {
+            cout << "Es un numero primo\n";
         }
         else {
-            cout << "No es primo" << endl;
+            cout << "No es un numero primo\n";
         }
         break;
     }
